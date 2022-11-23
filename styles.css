@@ -81,3 +81,35 @@ main .short {
 main .tall {
 	grid-row: span 2;
 }
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 960px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 620px) {
+	nav {
+		grid-template-columns: repeat(4, 1fr);
+		margin: 0 auto 1em auto;
+	}
+
+	nav h1 {
+		grid-column: 1 / span 4;
+		grid-row: 1;
+		margin-bottom: 1.5em;
+	}
+
+	main {
+		grid-template-columns: 1fr;
+		max-width: 400px;
+		margin: 1.25em auto;
+	}
+}
+
+@media (max-width: 480px) {
+	nav {
+		grid-template-columns: 1fr;
+	}
+}
